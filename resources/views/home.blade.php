@@ -1,18 +1,27 @@
-@extends('layout.app')
+@extends('layout.app_user')
 
 @section('content')
 
 <style>
     .main-bg {
-        background-image: url("images/baju2.png");
+        background-image: url("images/hero2.png");
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: center;
     }
     .title {
-        font-size: 10rem;
+        font-size: 5.5rem;
+        text-shadow: 2px 2px #1a457d;
+        font-family: "Bagel Fat One", system-ui;
+        font-weight: 400;
+    }
+    .hero-desc{
+        width:50%;
     }
     .subtitle{
+        font-family: "Bagel Fat One", system-ui;
         font-size: 4rem;
+        color: #31ccd5;
     }
     .service-title {
         font-size: 2rem;
@@ -23,6 +32,9 @@
     @media only screen and (max-width: 600px) {
         .title {
             font-size: 4rem;
+        }
+        .hero-desc{
+            width:100%;
         }
         .subtitle {
             font-size: 3rem;
@@ -35,9 +47,10 @@
         }
     }
 </style>
-<div class="main-bg vh-100 d-flex justify-content-center align-items-center text-center flex-column">
-    <h1 class="text-white title">Lovely Laundry</h1>
-    <h3 class="text-white">Fast and Fresh</h3>
+<div class="main-bg vh-100 d-flex justify-content-center align-items-md-end align-items-center text-center flex-column px-5">
+    <h1 class="title text-info">LOVELY LAUNDRY</h1>
+    <h3 class="fs-1 fw-bold">Clean, Fast, and Reliable</h3>
+    <p class="hero-desc fw-bold text-center text-md-end">We take care of every detail of your garments, from washing and ironing to folding, all with the utmost attention and the highest quality.</p>
 </div>
 <div class="min-vh-100 bg-info-subtle d-flex justify-content-center align-items-center flex-column p-5">
     <h1 style="" class="mb-5 subtitle text-center">Why Choose Us?</h1>
