@@ -11,7 +11,7 @@
         <div class="d-flex flex-column">
             <div class="d-flex flex-column flex-md-row gap-md-4 align-items-start align-items-md-center mb-2 mb-md-0">
                 <h3>Same Day Laundry</h3>
-                <div class="badge rounded-pill text-bg-warning h-50">On Progress</div>
+                <div class="badge rounded-pill text-bg-secondary h-50">Waiting Pick Up</div>
             </div>
             <div class="d-flex flex-column flex-md-row justify-content-between gap-3 gap-md-0">
                 <div>Weight: 2 kg x Rp9.000,00</div>
@@ -41,7 +41,7 @@
             </div>
             <div>
                 <form action="{{ url('/user/history') }}">
-                    <button type="submit" class="btn btn-info float-right">Pick Up</button>
+                    <button type="submit" class="btn btn-info float-right">Deliver</button>
                 </form>
             </div>
         </div>

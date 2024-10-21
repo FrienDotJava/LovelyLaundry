@@ -4,15 +4,24 @@
 
 <style>
     .main-bg {
-        background-image: url("images/baju2.png");
+        background-image: url("images/hero.png");
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: center;
     }
     .title {
-        font-size: 10rem;
+        font-size: 5.5rem;
+        text-shadow: 2px 2px #1a457d;
+        font-family: "Bagel Fat One", system-ui;
+        font-weight: 400;
+    }
+    .hero-desc{
+        width:50%;
     }
     .subtitle{
+        font-family: "Bagel Fat One", system-ui;
         font-size: 4rem;
+        color: #31ccd5;
     }
     .service-title {
         font-size: 2rem;
@@ -20,9 +29,22 @@
     .service-feature {
         font-size: 1.2rem;
     }
+    .how-it-works{
+        background-image: url("images/how-it-works.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .how-it-works-card {
+        background-color: rgba(255, 255, 255, 0.7) !important; 
+        width:40%;
+    }
     @media only screen and (max-width: 600px) {
         .title {
             font-size: 4rem;
+        }
+        .hero-desc{
+            width:100%;
         }
         .subtitle {
             font-size: 3rem;
@@ -33,14 +55,18 @@
         .service-feature {
             font-size: 1rem;
         }
+        .how-it-works-card {
+            width:100%;
+        }
     }
 </style>
-<div class="main-bg vh-100 d-flex justify-content-center align-items-center text-center flex-column">
-    <h1 class="text-white title">Lovely Laundry</h1>
-    <h3 class="text-white">Fast and Fresh</h3>
+<div class="main-bg vh-100 d-flex justify-content-center align-items-md-end align-items-center text-center flex-column px-5">
+    <h1 class="title text-info">LOVELY LAUNDRY</h1>
+    <h3 class="fs-1 fw-bold">Clean, Fast, and Reliable</h3>
+    <p class="hero-desc fw-bold text-center text-md-end">We take care of every detail of your garments, from washing and ironing to folding, all with the utmost attention and the highest quality.</p>
 </div>
 <div class="min-vh-100 bg-info-subtle d-flex justify-content-center align-items-center flex-column p-5">
-    <h1 style="" class="mb-5 subtitle text-center">Why Choose Us?</h1>
+    <h1 class="mb-5 subtitle text-center">Why Choose Us?</h1>
     <div class="d-flex flex-column flex-md-row gap-5 justify-content-center align-items-center">
         <div class="d-flex flex-column justify-content-center align-items-center w-md-25 text-center">
             <div style="font-size:8rem; color: #31ccd5;">
@@ -67,7 +93,7 @@
     </div>
 </div>
 <div class="min-vh-100 d-flex gap-3 flex-column justify-content-center align-items-center flex-column px-5 py-3">
-    <h1 style="" class="subtitle">Services</h1>
+    <h1 class="subtitle">Services</h1>
     <div class="d-flex flex-column flex-md-row gap-3 gap-md-5 justify-content-center align-items-center">
         <div class="card px-2 bg-info-subtle">
             <div class="card-body text-center">
@@ -87,7 +113,7 @@
                         <div>
                         <i class="fa-solid fa-hands-bubbles"></i>
                         </div>
-                        <div class="">
+                        <div>
                             Wash + Tumble Dry + Press + Fold
                         </div>
                     </div>
@@ -207,7 +233,33 @@
                 <a href="{{ url('/dash/order') }}" class="btn btn-info rounded-pill">Order Now</a>
             </div>
         </div>
-        
+    </div>
+</div>
+<div class="vh-100 how-it-works d-flex align-items-center p-4">
+    <div class="card p-3 how-it-works-card">
+        <h1 class="text-center my-3 subtitle text-black">How It Works</h1>
+        <div style="font-size:1.2rem;">
+            <ul style="list-style-type:disc;">
+                <li class="my-2">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">Book Online</div>
+                        Choose the service you need.
+                    </div>
+                </li>
+                <li class="my-2">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">Pickup & Delivery</div>
+                        We pick up your laundry from home or office.
+                    </div>
+                </li>
+                <li class="my-2">
+                    <div class="ms-2 me-auto">
+                        <div class="fw-bold">Wash & Dry</div>
+                        Your clothes are cleaned with the best quality care
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 @endsection

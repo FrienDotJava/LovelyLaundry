@@ -10,7 +10,7 @@
         <div class="d-flex flex-column">
             <div class="d-flex flex-column flex-md-row gap-md-4 align-items-start align-items-md-center mb-2 mb-md-0">
                 <h3>Next Day Laundry</h3>
-                <div class="badge rounded-pill text-bg-success h-50">Finished</div>
+                <div class="badge rounded-pill text-bg-success h-50">Delivered</div>
             </div>
             <div class="d-flex flex-column flex-md-row justify-content-between gap-3 gap-md-0">
                 <div>Weight: 2 kg x Rp6.000,00</div>

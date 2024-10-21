@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wash It!</title>
-    <link rel="icon" type="image/x-icon" href="/images/logo-zoom.png">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -12,10 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
@@ -25,19 +20,17 @@
         }
         .navbar-brand {
             font-family: "Bagel Fat One", system-ui;
-            font-weight: 100;
-            text-shadow: 1px 1px #1a457d;
+            font-weight: 400;
         }
-        
     </style>
 </head>
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary px-md-4 bg-info-subtle">
+    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary px-md-4 bg-info-subtle" style="">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="{{ asset('images/logo-zoom.png') }}" alt="Bootstrap" width="30" height="30" class="rounded-circle">
             </a>
-            <a class="navbar-brand fw-bold text-info" href="/">Lovely</a>
+            <a class="navbar-brand fw-bold" href="#">Lovely</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -55,6 +48,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/user/order') }}">Order</a>
                     </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link bg-white rounded-pill border" href="{{ url('dashboard') }}">Dashboard</a>
+                    </li> -->
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 profile-menu"> 
                     <li class="nav-item dropdown">
@@ -80,7 +76,7 @@
     @yield('content')
 
     <div class="d-flex flex-column justify-content-center align-items-center py-5 gap-3" style="background-color: #1a457d">
-        <div>
+        <div class="">
             <h3 class="text-white">Get in touch with us!</h3>
         </div>
         <div class="d-flex justify-content-center align-items-center gap-4">

@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('content')
-<section class="pt-3" style="background-color: #31ccd5; height: fit-content;">
+<section class="pt-3 bg-info" style="background-color: #31ccd5; height: fit-content;">
   <div class="container py-3">
     <div class="row d-flex justify-content-center align-items-center">
       <div class="col-lg-12 col-xl-11">
@@ -17,8 +17,8 @@
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                      <input type="text" id="form3Example1c" class="form-control" />
-                      <label class="form-label" for="form3Example1c">Username</label>
+                      <input type="email" id="form3Example1c" class="form-control" />
+                      <label class="form-label" for="form3Example1c">Email</label>
                     </div>
                   </div>
 

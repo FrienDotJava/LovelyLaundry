@@ -47,6 +47,10 @@
                     <label for="weight" class="fs-4 fw-normal">Laundry Weight</label>
                     <input type="number" name="weight" id="weight" class="form-control">
                 </div>
+                <div class="col">
+                    <label for="pickup" class="fs-4 fw-normal">Pickup Date</label>
+                    <input type="date" name="pickup" id="pickup" class="form-control">
+                </div>
             </div>
             <button type="submit" class="btn btn-info mt-4">Submit</button>
         </form>

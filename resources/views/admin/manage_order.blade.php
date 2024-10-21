@@ -4,8 +4,8 @@
 
 <div class="p-5">
     <div class="bg-white rounded-3 border px-3">
-        <div class="d-flex justify-content-between align-items-center mt-3">
-            <h1 class="fw-bold">Users</h1>
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-3">
+            <h1 class="fw-bold">Orders</h1>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
