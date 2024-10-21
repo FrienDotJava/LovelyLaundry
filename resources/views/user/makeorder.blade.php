@@ -1,8 +1,5 @@
-@extends('layout.app')
-
+@extends('layout.app_user')
 @section('content')
-
-
 
 <div class="py-5 d-flex flex-column justify-content-center align-items-center">
     <h1 class="fw-bold mt-5">Input Order Laundry</h1>
