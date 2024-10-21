@@ -1,4 +1,4 @@
-@extends('layout.app_user')
+@extends('layout.app')
 
 @section('content')
 
@@ -18,19 +18,10 @@
     }
     .hero-desc{
         width:50%;
-        font-size: 5.5rem;
-        text-shadow: 2px 2px #1a457d;
-        font-family: "Bagel Fat One", system-ui;
-        font-weight: 400;
-    }
-    .hero-desc{
-        width:50%;
     }
     .subtitle{
         font-family: "Bagel Fat One", system-ui;
-        font-family: "Bagel Fat One", system-ui;
         font-size: 4rem;
-        color: #31ccd5;
         color: #31ccd5;
     }
     .service-title {
@@ -73,10 +64,6 @@
         }
     }
 </style>
-<div class="main-bg vh-100 d-flex justify-content-center align-items-md-end align-items-center text-center flex-column px-5">
-    <h1 class="title text-info">LOVELY LAUNDRY</h1>
-    <h3 class="fs-1 fw-bold">Clean, Fast, and Reliable</h3>
-    <p class="hero-desc fw-bold text-center text-md-end">We take care of every detail of your garments, from washing and ironing to folding, all with the utmost attention and the highest quality.</p>
 <div class="main-bg vh-100 d-flex justify-content-center align-items-md-end align-items-center text-center flex-column px-5">
     <h1 class="title text-info">LOVELY LAUNDRY</h1>
     <h3 class="fs-1 fw-bold">Clean, Fast, and Reliable</h3>

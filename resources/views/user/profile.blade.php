@@ -1,8 +1,4 @@
-@if(Auth::check())
-@extends('layout.app_user')
-@else
 @extends('layout.app')
-@endif
 
 @section('content')
 

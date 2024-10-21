@@ -1,4 +1,4 @@
-@extends('layout.app_user')
+@extends('layout.app')
 @section('content')
 
 <div class="py-5 d-flex flex-column justify-content-center align-items-center">

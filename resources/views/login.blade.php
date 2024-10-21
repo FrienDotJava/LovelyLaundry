@@ -1,4 +1,4 @@
-@extends('layout.app_user')
+@extends('layout.app')
 
 @section('content')
 <section class="pt-3 bg-info" style="background-color: #31ccd5; height: fit-content;">
@@ -16,7 +16,7 @@
                     <b>Opps!</b> {{session('error')}}
                 </div>
                 @endif
-                <form action="{{ url('actionlogin') }}" method="post" class="mx-1 mx-md-4">
+                <form action="{{ url('/admin/dashboard') }}" class="mx-1 mx-md-4">
                 @csrf
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
