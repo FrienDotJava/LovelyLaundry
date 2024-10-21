@@ -13,8 +13,8 @@
                 style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
                 <img src="{{ asset('img/user2-160x160.jpg') }}"
                     alt="Avatar" class="img-fluid img-circle my-5" style="width: 80px;" />
-                <h5>{{Auth::user()->name}}</h5>
-                <p>{{Auth::user()->role}}</p>
+                <h5>Frendy</h5>
+                <p>Customer</p>
                 </div>
                 <div class="col-md-8">
                 <div class="card-body p-4">
