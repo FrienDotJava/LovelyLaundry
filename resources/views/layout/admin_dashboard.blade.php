@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-
+    <link rel="icon" type="image/x-icon" href="/images/logo-zoom.png">
     <style>
         body{
             font-family: "ABeeZee", sans-serif !important;

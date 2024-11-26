@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layout.app_user')
 
 @section('content')
 
@@ -13,30 +13,29 @@
                 style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
                 <img src="{{ asset('img/user2-160x160.jpg') }}"
                     alt="Avatar" class="img-fluid img-circle my-5" style="width: 80px;" />
-                <h5>Frendy</h5>
-                <p>Customer</p>
+                <h5>{{Auth::user()->name}}</h5>
+                <p>{{Auth::user()->role}}</p>
                 </div>
                 <div class="col-md-8">
                 <div class="card-body p-4">
                     <div class="row pt-1">
                         <div class="col-7 mb-3">
                             <h6>Email</h6>
-                            <p class="text-muted">frenfrendy3@gmail.com</p>
+                            <p class="text-muted">{{Auth::user()->email}}</p>
                         </div>
                     </div>
                     <div class="row pt-1">
                         <div class="col-6 mb-3">
                             <h6>Phone Number</h6>
-                            <p class="text-muted">0821-5404-3323</p>
+                            <p class="text-muted">{{Auth::user()->noHp}}</p>
                         </div>
                     </div>
                     <div class="row pt-1">
                         <div class="col-8 mb-3">
                             <h6>Address</h6>
                             <p class="text-muted">
-                                742 Evergreen Terrace, Apartment 4B <br>
-                                Springfield, CA 95820 <br>
-                                United States of America</p>
+                                {{Auth::user()->address}}    
+                            </p>
                         </div>
                     </div>
                 </div>

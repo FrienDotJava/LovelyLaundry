@@ -1,13 +1,12 @@
-@extends('layout.app')
+@extends('layout.app_user')
 
 @section('content')
 
 <style>
     .main-bg {
-        background-image: url("images/hero.png");
+        background-image: url("images/hero2.png");
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center;
         background-position: center;
     }
     .title {
@@ -47,9 +46,6 @@
         .hero-desc{
             width:100%;
         }
-        .hero-desc{
-            width:100%;
-        }
         .subtitle {
             font-size: 3rem;
         }
@@ -59,9 +55,6 @@
         .service-feature {
             font-size: 1rem;
         }
-        .how-it-works-card {
-            width:100%;
-        }
     }
 </style>
 <div class="main-bg vh-100 d-flex justify-content-center align-items-md-end align-items-center text-center flex-column px-5">
@@ -70,7 +63,7 @@
     <p class="hero-desc fw-bold text-center text-md-end">We take care of every detail of your garments, from washing and ironing to folding, all with the utmost attention and the highest quality.</p>
 </div>
 <div class="min-vh-100 bg-info-subtle d-flex justify-content-center align-items-center flex-column p-5">
-    <h1 class="mb-5 subtitle text-center">Why Choose Us?</h1>
+    <h1 style="" class="mb-5 subtitle text-center">Why Choose Us?</h1>
     <div class="d-flex flex-column flex-md-row gap-5 justify-content-center align-items-center">
         <div class="d-flex flex-column justify-content-center align-items-center w-md-25 text-center">
             <div style="font-size:8rem; color: #31ccd5;">
@@ -97,7 +90,7 @@
     </div>
 </div>
 <div class="min-vh-100 d-flex gap-3 flex-column justify-content-center align-items-center flex-column px-5 py-3">
-    <h1 class="subtitle">Services</h1>
+    <h1 style="" class="subtitle">Services</h1>
     <div class="d-flex flex-column flex-md-row gap-3 gap-md-5 justify-content-center align-items-center">
         <div class="card px-2 bg-info-subtle">
             <div class="card-body text-center">
@@ -117,13 +110,13 @@
                         <div>
                         <i class="fa-solid fa-hands-bubbles"></i>
                         </div>
-                        <div>
+                        <div class="">
                             Wash + Tumble Dry + Press + Fold
                         </div>
                     </div>
                 </div>
                 <h3 class="fw-bold my-4">Rp5.000,00/KG</h3>
-                <a href="{{ url('/dash/order') }}" class="btn btn-info rounded-pill">Order Now</a>
+                <a href="{{ url('/user/order') }}" class="btn btn-info rounded-pill">Order Now</a>
             </div>
         </div>
         <div class="card px-2 bg-info-subtle">
@@ -150,7 +143,7 @@
                     </div>
                 </div>
                 <h3 class="fw-bold my-4">Rp9.000,00/KG</h3>
-                <a href="{{ url('/dash/order') }}" class="btn btn-info rounded-pill">Order Now</a>
+                <a href="{{ url('/user/order') }}" class="btn btn-info rounded-pill">Order Now</a>
             </div>
         </div>
         <div class="card px-2 bg-info-subtle">
@@ -177,7 +170,7 @@
                     </div>
                 </div>
                 <h3 class="fw-bold my-4">Rp6.000,00/KG</h3>
-                <a href="{{ url('/dash/order') }}" class="btn btn-info rounded-pill">Order Now</a>
+                <a href="{{ url('/user/order') }}" class="btn btn-info rounded-pill">Order Now</a>
             </div>
         </div>
         
@@ -207,7 +200,7 @@
                     </div>
                 </div>
                 <h3 class="fw-bold my-4">Rp3.500,00/KG</h3>
-                <a href="{{ url('/dash/order') }}" class="btn btn-info rounded-pill">Order Now</a>
+                <a href="{{ url('/user/order') }}" class="btn btn-info rounded-pill">Order Now</a>
             </div>
         </div>
         <div class="card px-2 bg-info-subtle">
@@ -234,7 +227,7 @@
                     </div>
                 </div>
                 <h3 class="fw-bold my-4">Rp4.000,00/KG</h3>
-                <a href="{{ url('/dash/order') }}" class="btn btn-info rounded-pill">Order Now</a>
+                <a href="{{ url('/user/order') }}" class="btn btn-info rounded-pill">Order Now</a>
             </div>
         </div>
     </div>

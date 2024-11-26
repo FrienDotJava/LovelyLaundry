@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layout.app_user')
 @section('content')
 
 <div class="py-5 d-flex flex-column justify-content-center align-items-center">
@@ -43,10 +43,6 @@
                 <div class="col">
                     <label for="weight" class="fs-4 fw-normal">Laundry Weight</label>
                     <input type="number" name="weight" id="weight" class="form-control">
-                </div>
-                <div class="col">
-                    <label for="pickup" class="fs-4 fw-normal">Pickup Date</label>
-                    <input type="date" name="pickup" id="pickup" class="form-control">
                 </div>
             </div>
             <button type="submit" class="btn btn-info mt-4">Submit</button>

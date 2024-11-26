@@ -14,7 +14,7 @@ class LoginController extends Controller
         if (Auth::check()) {
             return redirect('/');
         }else{
-            return view('/login');
+            return view('login');
         }
     }
 
@@ -25,8 +25,13 @@ class LoginController extends Controller
             'password' => $request->input('password'),
         ];
 
-        if (Auth::Attempt($data)) {
-            return redirect('/');
+        if (Auth::attempt($data)) {
+            if(Auth::user()->name == "Admin"){
+                return redirect('/admin/dashboard');
+            }
+            else {
+                return redirect('/');
+            }
         }else{
             Session::flash('error', 'Email atau Password Salah');
             

@@ -1,7 +1,8 @@
-@extends('layout.app')
+@extends('layout.app_user')
 
 @section('content')
 <section class="pt-3 bg-info" style="background-color: #31ccd5; height: fit-content;">
+  
   <div class="container py-3">
     <div class="row d-flex justify-content-center align-items-center">
       <div class="col-lg-12 col-xl-11">
@@ -16,12 +17,12 @@
                     <b>Opps!</b> {{session('error')}}
                 </div>
                 @endif
-                <form action="{{ url('/admin/dashboard') }}" class="mx-1 mx-md-4">
+                <form action="{{ url('actionlogin') }}" method="post" class="mx-1 mx-md-4">
                 @csrf
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                      <input type="email" id="form3Example1c" class="form-control" />
+                      <input type="email" id="form3Example1c" class="form-control" name="email"/>
                       <label class="form-label" for="form3Example1c">Email</label>
                     </div>
                   </div>
