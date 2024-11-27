@@ -30,7 +30,7 @@
         
         .card {
             border-radius: 10px;
-            box-shadow 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s ease-in-out;
         }
 
@@ -96,7 +96,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <a href="{{ url('/') }}">
+                    <a href="/actionlogout">
                         <button type="button" class="btn btn-danger">Logout</button>
                     </a>
                 </div>
@@ -156,7 +156,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ url('admin/order') }}" class="nav-link">
+                            <a href="{{ route('order.index') }}" class="nav-link">
                                 <i class="nav-icon fas fa-shirt"></i>
                                 <p> Order Management </p>
                             </a>

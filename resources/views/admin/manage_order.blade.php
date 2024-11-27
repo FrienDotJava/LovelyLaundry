@@ -27,97 +27,23 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @forelse($order as $item)
                     <tr>
-                        <td>1</td>
-                        <td>Frendy</td>
-                        <td>Regular Laundry</td>
-                        <td>Oct 12, 2024</td>
-                        <td>3.4 KG</td>
-                        <td>Rp17.000,00</td>
+                        <td>{{ $item->id }}</td>
+                        <td>{{ $item->user->name }}</td>
+                        <td>{{ $item->layanan->nama_layanan }}</td>
+                        <td>{{ $item->tanggal_pickup }}</td>
+                        <td>{{ $item->berat }} KG</td>
+                        <td>Rp{{ number_format($item->total_harga, 0, ',', '.') }},00</td>
                         <td><div class="badge rounded-pill text-bg-warning h-50">On Progress</div></td>
                         <td>
                             <button class="btn btn-info"><i class="fas fa-pen-to-square"></i></button>
                             <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
                         </td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Doe</td>
-                        <td>Next Day Laundry</td>
-                        <td>Oct 12, 2024</td>
-                        <td>3.4 KG</td>
-                        <td>Rp17.000,00</td>
-                        <td><div class="badge rounded-pill text-bg-success h-50">Finished</div></td>
-                        <td>
-                            <button class="btn btn-info"><i class="fas fa-pen-to-square"></i></button>
-                            <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Andela</td>
-                        <td>Regular Laundry</td>
-                        <td>Oct 12, 2024</td>
-                        <td>3.4 KG</td>
-                        <td>Rp17.000,00</td>
-                        <td><div class="badge rounded-pill text-bg-warning h-50">On Progress</div></td>
-                        <td>
-                            <button class="btn btn-info"><i class="fas fa-pen-to-square"></i></button>
-                            <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Dolores</td>
-                        <td>Regular Laundry</td>
-                        <td>Oct 12, 2024</td>
-                        <td>3.4 KG</td>
-                        <td>Rp17.000,00</td>
-                        <td><div class="badge rounded-pill text-bg-success h-50">Finished</div></td>
-                        <td>
-                            <button class="btn btn-info"><i class="fas fa-pen-to-square"></i></button>
-                            <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Prada</td>
-                        <td>Same Day Laundry</td>
-                        <td>Oct 12, 2024</td>
-                        <td>3.4 KG</td>
-                        <td>Rp17.000,00</td>
-                        <td><div class="badge rounded-pill text-bg-success h-50">Finished</div></td>
-                        <td>
-                            <button class="btn btn-info"><i class="fas fa-pen-to-square"></i></button>
-                            <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Joni</td>
-                        <td>Next Day Laundry</td>
-                        <td>Oct 12, 2024</td>
-                        <td>3.4 KG</td>
-                        <td>Rp17.000,00</td>
-                        <td><div class="badge rounded-pill text-bg-warning h-50">On Progress</div></td>
-                        <td>
-                            <button class="btn btn-info"><i class="fas fa-pen-to-square"></i></button>
-                            <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>Renzi</td>
-                        <td>Regular Laundry</td>
-                        <td>Oct 12, 2024</td>
-                        <td>3.4 KG</td>
-                        <td>Rp17.000,00</td>
-                        <td><div class="badge rounded-pill text-bg-warning h-50">On Progress</div></td>
-                        <td>
-                            <button class="btn btn-info"><i class="fas fa-pen-to-square"></i></button>
-                            <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                        </td>
-                    </tr>
+                    @empty
+                    <h2>Data Kosong</h2>
+                    @endforelse
                 </tbody>
             </table>
         </div>

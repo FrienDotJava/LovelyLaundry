@@ -20,17 +20,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
     <style>
+        html, body {
+            height: 100%; 
+        }
+
         body {
             font-family: "ABeeZee", sans-serif;
+            display: flex;
+            flex-direction: column;
         }
+
         .navbar-brand {
             font-family: "Bagel Fat One", system-ui;
             font-weight: 400;
         }
+
+        .profile-menu {
+            margin-left: auto;
+        }
+
+        .content-wrapper {
+            flex-grow: 1;
+        }
+
+        .footer {
+            background-color: #0f294d;
+        }
+
+        .footer p {
+            font-size: 0.7rem;
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary px-md-4 bg-info-subtle" style="">
+    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary px-md-4 bg-info-subtle" style="z-index: 10;">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="{{ asset('images/logo-zoom.png') }}" alt="Bootstrap" width="30" height="30" class="rounded-circle">
@@ -49,13 +72,12 @@
                         <a class="nav-link" aria-current="page" href="/">Home</a>
                     @endif
                     </li>
-                    
                     @if(Auth::user()->role == 'Customer')
                     <li class="nav-item">
                     @if(Route::current()->getName() == 'order')
-                        <a class="nav-link active" href="{{ url('/user/order') }}">Order</a>
+                        <a class="nav-link active" href="{{ route('order.index') }}">Order</a>
                     @else
-                        <a class="nav-link" href="{{ url('/user/order') }}">Order</a>
+                        <a class="nav-link" href="{{ route('order.index') }}">Order</a>
                     @endif
                     </li>
                     @endif
@@ -114,13 +136,14 @@
                 </ul>
             </div>
             @endif
-            
         </div>
     </nav>
     
-    @yield('content')
+    <div class="content-wrapper">
+        @yield('content')
+    </div>
 
-    <div class="d-flex flex-column justify-content-center align-items-center py-5 gap-3" style="background-color: #1a457d">
+    <div class="footer d-flex flex-column justify-content-center align-items-center py-5 gap-3" style="background-color: #1a457d">
         <div class="">
             <h3 class="text-white">Get in touch with us!</h3>
         </div>
@@ -136,8 +159,8 @@
             </a>
         </div>
     </div>
-    <div class="d-flex justify-content-center align-items-center text-white py-3 px-4 text-center" style="background-color: #0f294d">
-        <p style="font-size: 0.7rem;">
+    <div class="d-flex justify-content-center align-items-center text-white py-3 px-4 text-center footer" style="background-color: #0f294d">
+        <p>
             <strong>Copyright &copy; {{ date('Y') }} <a href="#">Lovely Laundry</a>.</strong> All rights reserved.
         </p>
     </div>

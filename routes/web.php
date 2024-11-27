@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OrderController;
 use App\Http\Middleware\AdminMiddleware;
 
 Route::aliasMiddleware('admin', AdminMiddleware::class);
@@ -21,9 +22,9 @@ Route::post('actionregister', [RegisterController::class, 'actionregister'])->na
 Route::get('/user/profile', function () {
     return view('user.profile');
 });
-Route::get('/user/order', function () {
-    return view('user.order');
-})->name('order')->middleware('auth');
+// Route::get('/user/order', function () {
+//     return view('user.order');
+// })->name('order')->middleware('auth');
 Route::get('/user/makeorder', function () {
     return view('user.makeorder');
 });
@@ -39,3 +40,5 @@ Route::get('/admin/user', function () {
 Route::get('/admin/order', function () {
     return view('admin.manage_order');
 })->middleware(['auth', 'admin']);
+
+Route::resource('/order', OrderController::class)->middleware('auth');
