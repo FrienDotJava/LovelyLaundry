@@ -20,9 +20,10 @@ class OrderController extends Controller
         $userId = Auth::id();
         if(Auth::user()->role == 'Administrator'){
             $order = Order::all();
-            return view('admin.manage_order', compact('order'));
+            $layanan = Layanan::all();
+            return view('admin.manage_order', compact('order', 'layanan'));
         }else{
-            $order = Order::where('id_user', $userId)->get();
+            $order = Order::where('id_user', $userId)->where('status', '!=', 'Delivered')->get();
             return view('user.order', compact('order'));
         }
     }
@@ -66,7 +67,7 @@ class OrderController extends Controller
     public function edit($id){
         $order = Order::find($id);
         $layanan = Layanan::all();
-        return view('order.edit', compact('order', 'layanan'));
+        return view('admin.edit_order', compact('order', 'layanan'));
     }
     public function update(Request $request, $id){
         $order = Order::find($id);
@@ -99,9 +100,9 @@ class OrderController extends Controller
         $order->save();
 
         try{
-            return redirect()->route('admin.manage_order')->with(['success' => 'Data Berhasil Diubah!']);
+            return redirect()->route('order.index')->with(['success' => 'Data Berhasil Diubah!']);
         } catch (Exception $e){
-            return redirect()->route('admin.manage_order')->with(['success' => 'Data Berhasil Diubah!']);
+            return redirect()->route('order.index')->with(['success' => 'Data Berhasil Diubah!']);
         }
         
     }
@@ -119,6 +120,13 @@ class OrderController extends Controller
         $order = Order::where('status', 'Delivered')->where('id_user', $userId)->get();
         return view('user.history', compact('order'));
     }
+
+    public function showHistory(){
+        $userId = Auth::id();
+        $order = Order::where('status', 'Delivered')->where('id_user', $userId)->get();
+        return view('user.history', compact('order'));
+    }
+
     public function destroy($id){
         $order = Order::find($id);
         $order->delete();

@@ -5,7 +5,7 @@
 <div class="p-5">
     <div class="bg-white rounded-3 border px-3">
         <div class="d-flex justify-content-between align-items-center mt-3">
-            <h1 class="fw-bold">Users</h1>
+            <h1 class="fw-bold">Orders</h1>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
@@ -35,10 +35,24 @@
                         <td>{{ $item->tanggal_pickup }}</td>
                         <td>{{ $item->berat }} KG</td>
                         <td>Rp{{ number_format($item->total_harga, 0, ',', '.') }},00</td>
-                        <td><div class="badge rounded-pill text-bg-warning h-50">On Progress</div></td>
                         <td>
-                            <button class="btn btn-info"><i class="fas fa-pen-to-square"></i></button>
-                            <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                            @if($item->status == 'Waiting Pickup' || $item->status == 'On Progress')
+                                <div class="badge rounded-pill text-bg-warning h-50">{{ $item->status }}</div>
+                            @elseif($item->status == 'Finished')
+                                <div class="badge rounded-pill text-bg-success h-50">{{ $item->status }}</div>
+                            @else($item->status == 'Delivered')
+                                <div class="badge rounded-pill text-bg-info h-50">{{ $item->status }}</div>
+                            @endif
+                        </td>
+                        <td>
+                            <!-- Edit Button -->
+                            <a class="btn btn-info" href="{{route('order.edit', $item->id)}}">
+                                <i class="fas fa-pen-to-square"></i>
+                            </a>
+                            <!-- Delete Button -->
+                            <button class="btn btn-danger">
+                                <i class="fas fa-trash"></i>
+                            </button>
                         </td>
                     </tr>
                     @empty
@@ -49,4 +63,5 @@
         </div>
     </div>
 </div>
+
 @endsection

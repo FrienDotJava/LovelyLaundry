@@ -22,6 +22,14 @@
                 <div>Weight: {{$item->berat}} kg x Rp{{ number_format($item->layanan->harga_per_unit, 0, ',', '.') }},00</div>
                 <h4>Rp{{ number_format($item->total_harga, 0, ',', '.') }},00</h4>
             </div>
+            @if($item->status == 'Finished')
+            <div>
+                <form action="{{ route('handleDeliver', ['id' => $item->id]) }}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn btn-info float-right">Deliver</button>
+                </form>
+            </div>
+            @endif
         </div>
         <hr class="mt-0">
         @empty

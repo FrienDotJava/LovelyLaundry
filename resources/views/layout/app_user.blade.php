@@ -99,7 +99,7 @@
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{{ url('/user/profile') }}"><i class="fas fa-sliders-h fa-fw"></i> Account</a></li>
                             @if(Auth::user()->role == 'Customer')
-                            <li><a class="dropdown-item" href="{{ url('/user/history') }}"><i class="fas fa-clock-rotate-left fa-fw"></i> Order History</a></li>
+                            <li><a class="dropdown-item" href="{{ route('history') }}"><i class="fas fa-clock-rotate-left fa-fw"></i> Order History</a></li>
                             @endif
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="/actionlogout"><i class="fas fa-sign-out-alt fa-fw"></i> Log Out</a></li>

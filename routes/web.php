@@ -42,3 +42,6 @@ Route::get('/admin/order', function () {
 })->middleware(['auth', 'admin']);
 
 Route::resource('/order', OrderController::class)->middleware('auth');
+
+Route::post('actiondeliver/{id}', [OrderController::class, 'handleDeliver'])->name('handleDeliver')->middleware('auth');
+Route::get('history', [OrderController::class, 'showHistory'])->name('history')->middleware('auth');
