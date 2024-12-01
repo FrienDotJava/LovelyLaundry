@@ -38,9 +38,9 @@ class OrderController extends Controller
             'weight' => 'required',
             'date' => 'required',
         ], [
-            'service.required' => 'Layanan tidak boleh kosong.',
-            'weight.required' => 'Berat tidak boleh kosong.',
-            'date.required' => 'Tanggal tidak boleh kosong.',
+            'service.required' => 'Service cannot be empty.',
+            'weight.required' => 'Weight cannot be empty.',
+            'date.required' => 'Date cannot be empty.',
         ]);
         $userId = Auth::id();
 
@@ -77,10 +77,10 @@ class OrderController extends Controller
             'date' => 'required',
             'status' => 'required'
         ], [
-            'service.required' => 'Layanan tidak boleh kosong.',
-            'weight.required' => 'Berat tidak boleh kosong.',
-            'date.required' => 'Tanggal tidak boleh kosong.',
-            'status.required' => 'Status tidak boleh kosong.',
+            'service.required' => 'Service cannot be empty.',
+            'weight.required' => 'Weight cannot be empty.',
+            'date.required' => 'Date cannot be empty.',
+            'status.required' => 'Status cannot be empty.',
         ]);
 
         $userId = Auth::id();
@@ -100,9 +100,9 @@ class OrderController extends Controller
         $order->save();
 
         try{
-            return redirect()->route('order.index')->with(['success' => 'Data Berhasil Diubah!']);
+            return redirect()->route('order.index')->with(['success' => 'Data has been successfully updated!']);
         } catch (Exception $e){
-            return redirect()->route('order.index')->with(['success' => 'Data Berhasil Diubah!']);
+            return redirect()->route('order.index')->with(['error' => 'Failed to update data!']);
         }
         
     }
@@ -130,6 +130,19 @@ class OrderController extends Controller
     public function destroy($id){
         $order = Order::find($id);
         $order->delete();
-        return redirect()->route('admin.manage_order')->with(['success' => 'Data Berhasil Dihapus!']);
+        return redirect()->route('manageorder')->with(['success' => 'Data has been successfully deleted!']);
     }
+
+    public function search(Request $request)
+    {
+        $query = $request->query('name');
+
+        $order = Order::whereHas('user', function ($queryBuilder) use ($query) {
+            $queryBuilder->where('name', 'LIKE', '%' . $query . '%');
+        })->paginate(10);
+
+        return view('admin.manage_order', compact('order'));
+    }
+
+
 }
