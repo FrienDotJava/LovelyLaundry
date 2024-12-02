@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
@@ -32,9 +33,7 @@ Route::get('/user/makeorder', function () {
 Route::get('/user/history', function () {
     return view('user.history');
 });
-Route::get('/admin/dashboard', function () {
-    return view('admin.overview');
-})->middleware(['auth', 'admin']);
+Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('overview')->middleware(['auth', 'admin']);
 // Route::get('/admin/user', function () {
 //     return view('admin.manage_user');
 // })->middleware(['auth', 'admin']);
