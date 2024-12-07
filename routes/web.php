@@ -23,7 +23,9 @@ Route::post('actionregister', [RegisterController::class, 'actionregister'])->na
 
 Route::get('/user/profile', function () {
     return view('user.profile');
-});
+})->name('profileuser');
+
+
 // Route::get('/user/order', function () {
 //     return view('user.order');
 // })->name('order')->middleware('auth');
@@ -38,12 +40,17 @@ Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('ove
 //     return view('admin.manage_user');
 // })->middleware(['auth', 'admin']);
 
+Route::put('/user/update', [UserController::class, 'updateByUser'])->name('userupdate')->middleware(['auth']);
+Route::get('/user/edit', [UserController::class, 'editByUser'])->name('useredit')->middleware(['auth']);
+Route::get('user/editpassword', [UserController::class, 'editPassword'])->name('usereditpassword')->middleware(['auth']);
+Route::put('user/change-password', [UserController::class, 'changePassword'])->name('userchangepassword')->middleware(['auth']);
+
 Route::get('/admin/user', [UserController::class, 'index'])->name('manageuser')->middleware(['admin']);
 Route::delete('/admin/user/delete/{id}', [UserController::class, 'destroy'])->name('deleteuser')->middleware([ 'admin']);
 Route::post('/admin/user', [UserController::class, 'update'])->name('updateuser')->middleware(['admin']);
 Route::get('/admin/user/search', [UserController::class, 'search'])->name('searchuser')->middleware(['admin']);
-Route::put('/admin/user/{id}/update', [UserController::class, 'update'])->name('updateuser')->middleware(['admin']);
-Route::get('/admin/user/{id}/edit', [UserController::class, 'edit'])->name('edituser')->middleware(['admin']);
+Route::put('/admin/user/update/{id}', [UserController::class, 'updateByAdmin'])->name('updateuser')->middleware(['admin']);
+Route::get('/admin/user/edit/{id}', [UserController::class, 'editByAdmin'])->name('edituser')->middleware(['admin']);
 
 
 // Route::get('/admin/order', function () {

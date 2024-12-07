@@ -28,9 +28,7 @@
             </div>
 
             <div class="modal-footer d-flex gap-4 mb-3">
-                <form action="{{ route('manageuser') }}">
-                    <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </form>
+                <a href="{{ route('manageuser') }}" class="btn btn-secondary">Cancel</a>
                 <button type="submit" class="btn btn-info">Save changes</button>
             </div>
         </form>
