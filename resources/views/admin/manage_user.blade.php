@@ -87,8 +87,10 @@
                     @endforelse
                 </tbody>
             </table>
+            <div class="pagination">
+                {{ $users->links() }}
+            </div>
         </div>
-        {{ $users->links() }}
     </div>
 </div>
 @endsection

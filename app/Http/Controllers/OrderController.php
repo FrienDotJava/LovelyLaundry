@@ -20,7 +20,7 @@ class OrderController extends Controller
     public function index(){
         $userId = Auth::id();
         if(Auth::user()->role == 'Administrator'){
-            $order = Order::all();
+            $order = Order::paginate(10);
             $layanan = Layanan::all();
             return view('admin.manage_order', compact('order', 'layanan'));
         }else{

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Order;
 use App\Models\User;
 use App\Models\Layanan;
+use App\Models\Transaction;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Exception;
@@ -25,14 +26,24 @@ class DashboardController extends Controller
         $onprocess = Order::where('status', 'On Progress')->count();
         $allorder = Order::whereMonth('created_at', $currentMonth)->count();
 
-        $regular = Order::whereMonth('created_at', $currentMonth)->where('id_layanan', 1)->where('status', 'Delivered')->sum('total_harga');
-        $sameDay = Order::whereMonth('created_at', $currentMonth)->where('id_layanan', 2)->where('status', 'Delivered')->sum('total_harga');
-        $nextDay = Order::whereMonth('created_at', $currentMonth)->where('id_layanan', 3)->where('status', 'Delivered')->sum('total_harga');
-        $dry = Order::whereMonth('created_at', $currentMonth)->where('id_layanan', 4)->where('status', 'Delivered')->sum('total_harga');
-        $iron = Order::whereMonth('created_at', $currentMonth)->where('id_layanan', 5)->where('status', 'Delivered')->sum('total_harga');
+        $regular = Transaction::whereMonth('created_at', $currentMonth)->whereHas('order', function ($query) {
+            $query->where('id_layanan', 1);
+        })->sum('total_biaya');
+        $sameDay = Transaction::whereMonth('created_at', $currentMonth)->whereHas('order', function ($query) {
+            $query->where('id_layanan', 2);
+        })->sum('total_biaya');
+        $nextDay = Transaction::whereMonth('created_at', $currentMonth)->whereHas('order', function ($query) {
+            $query->where('id_layanan', 3);
+        })->sum('total_biaya');
+        $dry = Transaction::whereMonth('created_at', $currentMonth)->whereHas('order', function ($query) {
+            $query->where('id_layanan', 4);
+        })->sum('total_biaya');
+        $iron = Transaction::whereMonth('created_at', $currentMonth)->whereHas('order', function ($query) {
+            $query->where('id_layanan', 5);
+        })->sum('total_biaya');
 
-        $sum = Order::whereMonth('created_at', $currentMonth)->where('status', 'Delivered')->sum('total_harga');
-
+        $sum = Transaction::whereMonth('created_at', $currentMonth)->sum('total_biaya');
+ 
         $dashboardData = [
             'month' => $monthName,
             'year' => $currentYear,

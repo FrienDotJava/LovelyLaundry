@@ -7,6 +7,9 @@
     <link rel="icon" type="image/x-icon" href="/images/logo-zoom.png">
     <style>
         body{
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
             font-family: "ABeeZee", sans-serif !important;
         }
         .main-sidebar {
@@ -67,10 +70,46 @@
         }
 
         .content-wrapper{
+            flex:1;
             background-color: rgb(197, 255, 248,0.7) !important;
         }
         .nav-link:hover {
             background-color: rgba(197, 255, 248, 0.4) !important;
+        }
+        .table-responsive {
+            max-height: calc(100vh - 200px);
+            overflow-y: auto;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center; /* Center the pagination links */
+            margin-top: 20px;
+        }
+
+        .pagination li {
+            list-style: none;
+            margin: 0 5px;
+        }
+
+        .pagination a {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #007bff;
+            transition: background-color 0.3s ease;
+        }
+
+        .pagination a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .pagination .active a {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
         }
     </style>
 

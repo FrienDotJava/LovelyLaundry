@@ -54,7 +54,7 @@
                                 <div class="badge rounded-pill text-bg-warning h-50">{{ $item->status }}</div>
                             @elseif($item->status == 'Finished')
                                 <div class="badge rounded-pill text-bg-success h-50">{{ $item->status }}</div>
-                            @else($item->status == 'Delivered')
+                            @elseif($item->status == 'Delivered')
                                 <div class="badge rounded-pill text-bg-info h-50">{{ $item->status }}</div>
                             @endif
                         </td>
@@ -91,12 +91,15 @@
                         </div>
                     </tr>
                     @empty
-                    <div class="alert alert-danger">
-                        No Data Available
-                    </div>
+                    <tr>
+                        <td colspan="7" class="text-center">No orders found</td>
+                    </tr>
                     @endforelse
                 </tbody>
             </table>
+            <div class="pagination">
+                {{ $order->links() }}
+            </div>
         </div>
     </div>
 </div>
