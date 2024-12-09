@@ -6,6 +6,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\AdminMiddleware;
 
@@ -61,6 +62,10 @@ Route::delete('/admin/order/{id}', [OrderController::class, 'destroy'])->name('d
 Route::get('/admin/order/search', [OrderController::class, 'search'])->name('searchorder')->middleware(['admin']);
 
 Route::resource('/order', OrderController::class)->middleware('auth');
+Route::get('/transaction/{id}', [TransactionController::class, 'createTransaction'])->name('createTransaction')->middleware('auth');
+Route::post('/transaction/store/{id}', [TransactionController::class, 'storeTransaction'])->name('storeTransaction')->middleware('auth');
+Route::resource('/transaction', TransactionController::class)->middleware('auth');
 
 Route::post('actiondeliver/{id}', [OrderController::class, 'handleDeliver'])->name('handleDeliver')->middleware('auth');
+
 Route::get('history', [OrderController::class, 'showHistory'])->name('history')->middleware('auth');

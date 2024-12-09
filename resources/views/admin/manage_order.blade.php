@@ -37,7 +37,6 @@
                         <th>Service</th>
                         <th>Order Date</th>
                         <th>Weight</th>
-                        <th>Total Price</th>
                         <th>Status</th>
                         <th width="10%">Action</th>
                     </tr>
@@ -50,7 +49,6 @@
                         <td>{{ $item->layanan->nama_layanan }}</td>
                         <td>{{ $item->tanggal_pickup }}</td>
                         <td>{{ $item->berat }} KG</td>
-                        <td>Rp{{ number_format($item->total_harga, 0, ',', '.') }},00</td>
                         <td>
                             @if($item->status == 'Waiting Pickup' || $item->status == 'On Progress')
                                 <div class="badge rounded-pill text-bg-warning h-50">{{ $item->status }}</div>

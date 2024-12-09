@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Order;
 use App\Models\User;
 use App\Models\Layanan;
+use App\Models\Transaction;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Exception;
@@ -47,7 +48,6 @@ class OrderController extends Controller
         $idLayanan = $request->service;
         $layanan = Layanan::find($idLayanan);
         $berat = $request->weight;
-        $total = $layanan->harga_per_unit * $berat;
 
         Order::create([
             'id_user' => $userId,
@@ -55,8 +55,7 @@ class OrderController extends Controller
             'berat' => $berat,
             'tanggal_pickup' => $request->date,
             'tanggal_antar' => null,
-            'status' => "Waiting Pickup",
-            'total_harga' => $total
+            'status' => "Waiting Pickup"
         ]);
         try{
             return redirect()->route('order.index');
@@ -88,14 +87,12 @@ class OrderController extends Controller
         $idLayanan = $request->service;
         $layanan = Layanan::find($idLayanan);
         $berat = $request->weight;
-        $total = $layanan->harga_per_unit * $berat;
         
         $order->id_layanan = $idLayanan;
         $order->berat = $berat;
         $order->tanggal_pickup = $request->date;
         $order->tanggal_antar = null;
         $order->status = $request->status;
-        $order->total_harga = $total;
 
         $order->save();
 
@@ -107,24 +104,10 @@ class OrderController extends Controller
         
     }
 
-    public function handleDeliver($id){
-        $order = Order::find($id);
-
-        $currentDate = Carbon::today()->toDateString(); 
-
-        $order->tanggal_antar = $currentDate;
-        $order->status = "Delivered";
-        $order->save();
-
-        $userId = Auth::id();
-        $order = Order::where('status', 'Delivered')->where('id_user', $userId)->get();
-        return view('user.history', compact('order'));
-    }
-
     public function showHistory(){
         $userId = Auth::id();
-        $order = Order::where('status', 'Delivered')->where('id_user', $userId)->get();
-        return view('user.history', compact('order'));
+        $transaction = Transaction::where('id_user', $userId)->get();
+        return view('user.history', compact('transaction'));
     }
 
     public function destroy($id){
@@ -144,5 +127,12 @@ class OrderController extends Controller
         return view('admin.manage_order', compact('order'));
     }
 
+    public function showTransaction($id)
+    {
+        $userID = Auth::id();
+        $user = User::find($userID);
+        $order = Order::find($id);
 
+        return view('user.transaction', compact('order', 'user'));
+    }
 }
