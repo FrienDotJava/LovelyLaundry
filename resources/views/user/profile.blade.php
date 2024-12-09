@@ -2,8 +2,17 @@
 
 @section('content')
 
-<section class="vh-100" style="background-color: #f4f5f7;">
-    <div class="container py-5 h-100">
+<style>
+    .background{
+        background-image: url("../images/user-bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+</style>
+
+<section class="vh-100 background">
+    <div class="container py-5 h-100 ">
 
         <!-- TOAST -->
         @if (session('success'))

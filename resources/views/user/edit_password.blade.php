@@ -31,8 +31,8 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="newpwd1" class="form-label">Repeat New Password</label>
-                                <input type="password" class="form-control" id="newpwd1" name="newpwd1" placeholder="Repeat New Password" required>
+                                <label for="newpwd1" class="form-label">Confirm New Password</label>
+                                <input type="password" class="form-control" id="newpwd1" name="newpwd1" placeholder="Confirm New Password" required>
                             </div>
 
                             <div class="modal-footer d-flex gap-4 mb-3">
