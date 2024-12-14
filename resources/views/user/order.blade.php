@@ -6,8 +6,8 @@ use Carbon\Carbon;
 
 <div class="d-flex flex-column justify-content-center align-items-center py-5">
     <div class="pt-5 d-flex justify-content-between w-75 align-items-center">
-        <h1 class="fw-bold">My Order</h1>
-        <a href="{{ route('order.create') }}" class="btn btn-info" style="height:fit-content;">New Order</a>
+        <h1 class="fw-bold" style="font-family: 'Bagel Fat One', system-ui; color: #1e3463;">My Order</h1>
+        <a href="{{ route('order.create') }}" class="btn" style="height:fit-content; background-color: #1e3463; color: white;">New Order</a>
     </div>
     <div class="d-flex flex-column gap-4 w-75 bg-info-subtle rounded-2 p-5">
         @forelse ($order as $item)

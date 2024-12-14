@@ -34,6 +34,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        
     }
     .how-it-works-card {
         background-color: rgba(255, 255, 255, 0.7) !important; 
@@ -62,35 +63,36 @@
     <h3 class="fs-1 fw-bold">Clean, Fast, and Reliable</h3>
     <p class="hero-desc fw-bold text-center text-md-end">We take care of every detail of your garments, from washing and ironing to folding, all with the utmost attention and the highest quality.</p>
 </div>
-<div class="min-vh-100 bg-info-subtle d-flex justify-content-center align-items-center flex-column p-5">
-    <h1 style="" class="mb-5 subtitle text-center">Why Choose Us?</h1>
+<div class="min-vh-100 bg-info-subtle d-flex justify-content-center align-items-center flex-column pt-5 position-relative">
+    <h1 class="mb-5 subtitle text-center" style="color: #1e3463;">Why Choose Us?</h1>
     <div class="d-flex flex-column flex-md-row gap-5 justify-content-center align-items-center">
-        <div class="d-flex flex-column justify-content-center align-items-center w-md-25 text-center">
-            <div style="font-size:8rem; color: #31ccd5;">
+        <div class="card py-3 d-flex flex-column justify-content-center align-items-center w-md-25 text-center" style="max-width: 23.5rem; min-width: 23.5rem;">
+            <div style="font-size:8rem; color: #1e3463;">
                 <i class ="fas fa-star"></i>
             </div>
-            <h3>TOP QUALITY MACHINES</h3><br>
-            <p>Industrial grade commercial laundry machines.</p>
+            <h3 class="w-75">TOP QUALITY MACHINES</h3><br>
+            <p class="w-75">Industrial grade commercial laundry machines.</p>
         </div>
-        <div class="d-flex flex-column justify-content-center align-items-center w-md-25 text-center">
-            <div style="font-size:8rem; color: #31ccd5;">
+        <div class="card py-3 d-flex flex-column justify-content-center align-items-center w-md-25 text-center" style="max-width: 23.5rem; min-width: 23.5rem;">
+            <div style="font-size:8rem; color: #1e3463;">
                 <i class ="fas fa-soap"></i>
             </div>
-            <h3>ECO FRIENDLY DETERGENTS</h3><br>
-            <p>Cleans up with zero waste on environment.</p>
+            <h3 class="w-75">ECO FRIENDLY DETERGENTS</h3><br>
+            <p class="w-75">Cleans up with zero waste on environment.</p>
         </div>
-        <div class="d-flex flex-column justify-content-center align-items-center w-md-25 text-center">
-            <div style="font-size:8rem; color: #31ccd5;">
+        <div class="card py-3 d-flex flex-column justify-content-center align-items-center w-md-25 text-center" style="max-width: 23.5rem; min-width: 23.5rem;">
+            <div style="font-size:8rem; color: #1e3463;">
                 <i class ="fas fa-car"></i>
             </div>
-            <h3>PICK UP AND DELIVERY SERVICES</h3><br>
-            <p>Reliable, trustworthy, and background tested personnel.</p>
+            <h3 class="w-75">PICK UP AND DELIVERY SERVICES</h3><br>
+            <p class="w-75">Reliable, trustworthy, and background tested personnel.</p>
         </div>
-        
     </div>
+    <!-- <img src="images/awan.png" class="position-absolute bottom-0 end-0" alt="awan"> -->
+    <img src="images/awan2.png" class="w-100" alt="awan">
 </div>
-<div class="min-vh-100 d-flex gap-3 flex-column justify-content-center align-items-center flex-column px-5 py-3">
-    <h1 style="" class="subtitle">Services</h1>
+<div class="min-vh-100 d-flex gap-3 flex-column justify-content-center align-items-center flex-column px-5 py-3" style="background-color: #fcfcfa;">
+    <h1 style="color: #1e3463;" class="subtitle">Services</h1>
     <div class="d-flex flex-column flex-md-row gap-3 gap-md-5 justify-content-center align-items-center">
         <div class="card px-2 bg-info-subtle">
             <div class="card-body text-center">
@@ -116,7 +118,7 @@
                     </div>
                 </div>
                 <h3 class="fw-bold my-4">Rp5.000,00/KG</h3>
-                <a href="{{ url('/user/order') }}" class="btn btn-info rounded-pill">Order Now</a>
+                <a href="{{ url('/user/order') }}" class="btn rounded-pill" style="background-color: #1e3463; color: white;">Order Now</a>
             </div>
         </div>
         <div class="card px-2 bg-info-subtle">
@@ -143,7 +145,7 @@
                     </div>
                 </div>
                 <h3 class="fw-bold my-4">Rp9.000,00/KG</h3>
-                <a href="{{ url('/user/order') }}" class="btn btn-info rounded-pill">Order Now</a>
+                <a href="{{ url('/user/order') }}" class="btn rounded-pill" style="background-color: #1e3463; color: white;">Order Now</a>
             </div>
         </div>
         <div class="card px-2 bg-info-subtle">
@@ -170,7 +172,7 @@
                     </div>
                 </div>
                 <h3 class="fw-bold my-4">Rp6.000,00/KG</h3>
-                <a href="{{ url('/user/order') }}" class="btn btn-info rounded-pill">Order Now</a>
+                <a href="{{ url('/user/order') }}" class="btn rounded-pill" style="background-color: #1e3463; color: white;">Order Now</a>
             </div>
         </div>
         
@@ -200,7 +202,7 @@
                     </div>
                 </div>
                 <h3 class="fw-bold my-4">Rp3.500,00/KG</h3>
-                <a href="{{ url('/user/order') }}" class="btn btn-info rounded-pill">Order Now</a>
+                <a href="{{ url('/user/order') }}" class="btn rounded-pill" style="background-color: #1e3463; color: white;">Order Now</a>
             </div>
         </div>
         <div class="card px-2 bg-info-subtle">
@@ -227,14 +229,14 @@
                     </div>
                 </div>
                 <h3 class="fw-bold my-4">Rp4.000,00/KG</h3>
-                <a href="{{ url('/user/order') }}" class="btn btn-info rounded-pill">Order Now</a>
+                <a href="{{ url('/user/order') }}" class="btn rounded-pill" style="background-color: #1e3463; color: white;">Order Now</a>
             </div>
         </div>
     </div>
 </div>
 <div class="vh-100 how-it-works d-flex align-items-center p-4">
     <div class="card p-3 how-it-works-card">
-        <h1 class="text-center my-3 subtitle text-black">How It Works</h1>
+        <h1 class="text-center my-3 subtitle" style="color: #1e3463;">How It Works</h1>
         <div style="font-size:1.2rem;">
             <ul style="list-style-type:disc;">
                 <li class="my-2">

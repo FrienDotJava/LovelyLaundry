@@ -33,6 +33,8 @@
         .navbar-brand {
             font-family: "Bagel Fat One", system-ui;
             font-weight: 400;
+            color: #10ccf4 !important;
+            text-shadow: 1px 1px #194a89;
         }
 
         .profile-menu {
@@ -53,12 +55,12 @@
     </style>
 </head>
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary px-md-4 bg-info-subtle" style="z-index: 10;">
+    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary px-md-4" style="z-index: 10; background-color: #eefcfe !important;">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="{{ asset('images/logo-zoom.png') }}" alt="Bootstrap" width="30" height="30" class="rounded-circle">
             </a>
-            <a class="navbar-brand fw-bold text-info" href="/">Lovely</a>
+            <a class="navbar-brand fw-bold" href="/">Lovely</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

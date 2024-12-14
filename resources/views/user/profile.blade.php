@@ -8,6 +8,17 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        &:before {
+            content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                /* background-color: rgba(30, 52, 99, 1); */
+                background-image: linear-gradient(to bottom right,#1e3463,#000);
+                opacity: .6; 
+        }
     }
 </style>
 
@@ -34,7 +45,7 @@
                     <div class="card mb-3 bg-info-subtle card shadow-lg" style="border-radius: 1rem;">
                         <div class="card-body text-center">
                             <img src="{{ asset('img/user2-160x160.jpg') }}" alt="Avatar" class="img-fluid img-circle my-2 rounded-circle mb-3" style="width: 220px;" />
-                            <h5 class="text-info"><strong>{{Auth::user()->name}}</strong></h5>
+                            <h5 class="" style="color: #1e3463;"><strong>{{Auth::user()->name}}</strong></h5>
                             <p class="mb-2">{{Auth::user()->role}}</p>
                         </div>
                     </div>
@@ -44,11 +55,11 @@
                     <div class="card mb-3 bg-info-subtle card shadow-lg" style="border-radius: 1rem;">
                         <div class="card-body text-center">
                             <img src="{{ asset('img/user2-160x160.jpg') }}" alt="Avatar" class="img-fluid img-circle my-2 rounded-circle mb-3" style="width: 220px;" />
-                            <h5 class="text-info"><strong>{{Auth::user()->name}}</strong></h5>
+                            <h5 class="" style="color: #1e3463;"><strong>{{Auth::user()->name}}</strong></h5>
                             <p>{{Auth::user()->role}}</p>
                             <div class="d-grid gap-2 col-6 mx-auto">
-                                <a href="{{ route('useredit') }}" class="btn btn-info" style="height:fit-content; color:white;">Edit Profile</a>
-                                <a href="{{ route('usereditpassword') }}" class=" btn btn-info " style="height:fit-content; color:white;">Change Password</a>
+                                <a href="{{ route('useredit') }}" class="btn" style="height:fit-content; color:white; background-color: #1e3463;">Edit Profile</a>
+                                <a href="{{ route('usereditpassword') }}" class=" btn " style="height:fit-content; color:white; background-color: #1e3463;">Change Password</a>
                             </div>
                         </div>
                     </div>
@@ -58,11 +69,11 @@
                 <div class="col col-lg-14 mb-4">
                     <div class="card mb-3 bg-info-subtle card shadow-lg" style="border-radius: .5rem; height: 20rem;">
                         <div class="card-body p-4">
-                            <h1 class="text-center text-info">Account Information</h1>
+                            <h1 class="text-center" style="color: #1e3463; font-family: 'Bagel Fat One', system-ui;">Account Information</h1>
                             <div class="row ">
                                 <div class="col-md-6 p-4">
                                     <div class="d-flex align-items-center">
-                                        <i class="fa-solid fa-envelope text-info fa-2x me-3 mb-3"></i>
+                                        <i class="fa-solid fa-envelope fa-2x me-3 mb-3" style="color: #1e3463;"></i>
                                         <div>
                                             <h6><strong>Email</strong></h6>
                                             <p class="text-muted">{{Auth::user()->email}}</p>
@@ -71,7 +82,7 @@
                                 </div>
                                 <div class="col-md-6 p-4">
                                     <div class="d-flex align-items-center">
-                                        <i class="fa-solid fa-phone text-info fa-2x me-3 mb-3"></i>
+                                        <i class="fa-solid fa-phone fa-2x me-3 mb-3" style="color: #1e3463;"></i>
                                         <div>
                                             <h6><strong>Phone Number</strong></h6>
                                             <p class="text-muted">{{Auth::user()->noHp}}</p>
@@ -80,7 +91,7 @@
                                 </div>
                                 <div class="col-md-6 p-4">
                                     <div class="d-flex align-items-center">
-                                        <i class="fa-solid fa-location-dot text-info fa-2x me-4 mb-3"></i>
+                                        <i class="fa-solid fa-location-dot fa-2x me-4 mb-3" style="color: #1e3463;"></i>
                                         <div>
                                             <h6><strong>Address</strong></h6>
                                             <p class="text-muted">
