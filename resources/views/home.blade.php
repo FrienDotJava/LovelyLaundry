@@ -40,6 +40,15 @@
         background-color: rgba(255, 255, 255, 0.7) !important; 
         width:40%;
     }
+    .order-now {
+        background-color: white; 
+        color: #1e3463;
+        border:1px solid #1e3463 !important;
+    }
+    .order-now:hover {
+        background-color: #1e3463; 
+        color: white;
+    }
     @media only screen and (max-width: 600px) {
         .title {
             font-size: 4rem;
@@ -118,7 +127,7 @@
                     </div>
                 </div>
                 <h3 class="fw-bold my-4">Rp5.000,00/KG</h3>
-                <a href="{{ url('/user/order') }}" class="btn rounded-pill" style="background-color: #1e3463; color: white;">Order Now</a>
+                <a href="{{ url('/user/order') }}" class="btn rounded-pill order-now">Order Now</a>
             </div>
         </div>
         <div class="card px-2 bg-info-subtle">
@@ -145,7 +154,7 @@
                     </div>
                 </div>
                 <h3 class="fw-bold my-4">Rp9.000,00/KG</h3>
-                <a href="{{ url('/user/order') }}" class="btn rounded-pill" style="background-color: #1e3463; color: white;">Order Now</a>
+                <a href="{{ url('/user/order') }}" class="btn rounded-pill order-now">Order Now</a>
             </div>
         </div>
         <div class="card px-2 bg-info-subtle">
@@ -172,7 +181,7 @@
                     </div>
                 </div>
                 <h3 class="fw-bold my-4">Rp6.000,00/KG</h3>
-                <a href="{{ url('/user/order') }}" class="btn rounded-pill" style="background-color: #1e3463; color: white;">Order Now</a>
+                <a href="{{ url('/user/order') }}" class="btn rounded-pill order-now">Order Now</a>
             </div>
         </div>
         
@@ -202,7 +211,7 @@
                     </div>
                 </div>
                 <h3 class="fw-bold my-4">Rp3.500,00/KG</h3>
-                <a href="{{ url('/user/order') }}" class="btn rounded-pill" style="background-color: #1e3463; color: white;">Order Now</a>
+                <a href="{{ url('/user/order') }}" class="btn rounded-pill order-now">Order Now</a>
             </div>
         </div>
         <div class="card px-2 bg-info-subtle">
@@ -229,7 +238,7 @@
                     </div>
                 </div>
                 <h3 class="fw-bold my-4">Rp4.000,00/KG</h3>
-                <a href="{{ url('/user/order') }}" class="btn rounded-pill" style="background-color: #1e3463; color: white;">Order Now</a>
+                <a href="{{ url('/user/order') }}" class="btn rounded-pill order-now">Order Now</a>
             </div>
         </div>
     </div>
