@@ -22,7 +22,7 @@ class DashboardController extends Controller
         $currentYear = Carbon::now()->year;
         $monthName = Carbon::createFromFormat('m', $currentMonth)->format('F');
 
-        $usercount = User::all()->count();
+        $usercount = User::where('role', 'Customer')->count();
         $onprocess = Order::where('status', 'On Progress')->count();
         $allorder = Order::whereMonth('created_at', $currentMonth)->count();
 
