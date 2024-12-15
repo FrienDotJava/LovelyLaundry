@@ -4,7 +4,7 @@
 
 <div class="p-5">
     <div class="bg-white rounded-3 border px-3">
-        <div class="d-flex justify-content-between align-items-center mt-3">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-3">
             <h1 class="fw-bold">Users</h1>
             <form class="d-flex" role="search" action="{{ route('searchuser') }}">
                 <input class="form-control me-2" name="name" type="search" placeholder="Search" aria-label="Search">
@@ -48,7 +48,7 @@
                         <td>{{ $item->noHp }}</td>
                         <td>{{ $item->address }}</td>
                         <td>
-                            <form id="deleteForm{{ $item->id }}" action="{{ route('deleteuser', $item->id) }}" method="POST"> 
+                            <form id="deleteForm{{ $item->id }}" action="{{ route('deleteuser', $item->id) }}" method="POST" class="d-flex gap-3"> 
                                 <a class="btn btn-info" href="{{route('edituser', $item->id)}}" >
                                     <i class="fas fa-pen-to-square"></i>
                                 </a>
