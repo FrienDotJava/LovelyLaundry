@@ -65,6 +65,15 @@
         .service-feature {
             font-size: 1rem;
         }
+        .how-it-works-card {
+            background-color: rgba(255, 255, 255, 0.7) !important; 
+            width:80%;
+        }
+        .how-it-works{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 </style>
 <div class="main-bg vh-100 d-flex justify-content-center align-items-md-end align-items-center text-center flex-column px-5">
