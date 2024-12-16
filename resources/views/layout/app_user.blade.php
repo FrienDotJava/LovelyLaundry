@@ -52,6 +52,25 @@
         .footer p {
             font-size: 0.7rem;
         }
+
+        .btn-submit {
+            background-color:rgb(98, 192, 255); 
+            color:rgb(0, 0, 0);
+        }
+        .btn-submit:hover {
+            background-color: #1e3463; 
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color:rgb(94, 94, 94); 
+            color:rgb(255, 255, 255);
+        }
+        .btn-secondary:hover {
+            background-color:rgb(142, 142, 142); 
+            color: white;
+        }
+        
     </style>
 </head>
 <body>

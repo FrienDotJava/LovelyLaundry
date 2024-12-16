@@ -14,7 +14,7 @@
         }
         .main-sidebar {
             /* background: linear-gradient(135deg, #2c3e50 0%, #1a457d 100%); */
-            background-color: #ffffff !important;
+            background-color: #C6E7FF !important;
         }
 
         .main-header {
@@ -71,7 +71,7 @@
 
         .content-wrapper{
             flex:1;
-            background-color: rgb(197, 255, 248,0.7) !important;
+            background-color: rgb(245, 245, 245) !important;
         }
         .nav-link:hover {
             background-color: rgba(197, 255, 248, 0.4) !important;
@@ -143,7 +143,7 @@
         </div>
     </div>
     <div class="wrapper">
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <nav class="main-header navbar navbar-expand navbar-white" style="background-color: #C6E7FF">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button">
