@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="p-5">
-    <div class="bg-white rounded-3 border">
+    <div class="rounded-3 border" style="background-color: #C6E7FF;">
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-3 mx-3 ">
             <h1 class="fw-bold">Overview</h1>
             <h5 class="text-muted">{{$month}} {{$year}}</h5>
@@ -30,7 +30,7 @@
             </div>
         </div>
     </div>
-    <div class="mt-3 bg-white rounded-3 border">
+    <div class="mt-3 rounded-3 border" style="background-color: #C6E7FF;">
         <div class="d-flex flex-column justify-content-center align-items-start mt-3 mx-3 ">
             <h1 class="fw-bold">Financial Report: {{$month}} {{$year}}</h1>
             <h1 class="fw-bold">Total: <span style="color: #5FBDFF;">Rp{{ number_format($totalRev, 0, ',', '.') }},00</span></h1>

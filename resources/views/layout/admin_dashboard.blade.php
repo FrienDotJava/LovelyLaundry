@@ -14,7 +14,7 @@
         }
         .main-sidebar {
             /* background: linear-gradient(135deg, #2c3e50 0%, #1a457d 100%); */
-            background-color: #ffffff !important;
+            background-color: #C6E7FF !important;
         }
 
         .main-header {
@@ -71,7 +71,7 @@
 
         .content-wrapper{
             flex:1;
-            background-color: rgb(197, 255, 248,0.7) !important;
+            background-color: rgb(245, 245, 245) !important;
         }
         .nav-link:hover {
             background-color: rgba(197, 255, 248, 0.4) !important;
@@ -111,6 +111,30 @@
             color: white;
             border-color: #007bff;
         }
+
+        .btn-submit {
+            background-color:rgb(98, 192, 255) !important; 
+            color:rgb(0, 0, 0) !important;
+        }
+        .btn-submit:hover {
+            background-color: #1e3463 !important; 
+            color: white !important;
+        }
+
+        .btn-secondary {
+            background-color:rgb(189, 189, 189) !important; 
+            color:rgb(0, 0, 0) !important;
+            border: none !important;
+        }
+        .btn-secondary:hover {
+            background-color:rgb(87, 87, 87) !important; 
+            color: white !important;
+        }
+
+        .user-panel{
+            border-color: #ffffff !important;
+        }
+
     </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -143,7 +167,7 @@
         </div>
     </div>
     <div class="wrapper">
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <nav class="main-header navbar navbar-expand navbar-white" style="background-color: #C6E7FF">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button">

@@ -20,11 +20,11 @@ class OrderController extends Controller
     public function index(){
         $userId = Auth::id();
         if(Auth::user()->role == 'Administrator'){
-            $order = Order::paginate(10);
+            $order = Order::orderBy('created_at', 'desc')->paginate(10);
             $layanan = Layanan::all();
             return view('admin.manage_order', compact('order', 'layanan'));
         }else{
-            $order = Order::where('id_user', $userId)->where('status', '!=', 'Delivered')->get();
+            $order = Order::where('id_user', $userId)->where('status', '!=', 'Delivered')->orderBy('created_at', 'desc')->get();
             return view('user.order', compact('order'));
         }
     }
@@ -85,7 +85,6 @@ class OrderController extends Controller
         $userId = Auth::id();
 
         $idLayanan = $request->service;
-        $layanan = Layanan::find($idLayanan);
         $berat = $request->weight;
         
         $order->id_layanan = $idLayanan;
@@ -95,6 +94,12 @@ class OrderController extends Controller
         $order->status = $request->status;
 
         $order->save();
+
+        $transaction = Transaction::where('id_order',$order->id)->get();
+        foreach($transaction as $item){
+            $item->total_biaya = ($order->berat * $order->layanan->harga_per_unit) + 3000;
+            $item->save();
+        }
 
         try{
             return redirect()->route('order.index')->with(['success' => 'Data has been successfully updated!']);

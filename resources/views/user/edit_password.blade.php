@@ -3,12 +3,12 @@
 @section('content')
 
 <section class="vh-100 d-flex align-items-center justify-content-center" style="background-color: #f4f5f7;">
-    <div class="container">
-        <div class="row d-flex justify-content-center align-items-center "> 
+    <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100"> 
             <div class="col-md-8">
-                <div class="card mb-3 bg-info-subtle card shadow-lg py-3 px-5" style="border-radius: 1rem; width: 1000px;">
+                <div class="card mb-3 bg-info-subtle card shadow-lg py-3 px-5" style="border-radius: 1rem; width: 700px; margin: auto">
                         <div class="d-flex justify-content-between align-items-center mt-3">
-                            <h1 class="fw-bold">Edit Data</h1>
+                            <h1 class="fw-bold">Change Password</h1>
                         </div>
                         <hr class="mx-5">
                         @if(session('error'))
@@ -38,7 +38,7 @@
                             <div class="modal-footer d-flex gap-4 mb-3">
                                 <a href="{{ route('profileuser') }}" class="btn btn-secondary">Cancel</a>
 
-                                <button type="submit" class="btn btn-info">Save changes</button>
+                                <button type="submit" class="btn btn-submit">Save changes</button>
                             </div>
                         </form>
                         </div>
