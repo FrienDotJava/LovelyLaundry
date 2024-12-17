@@ -35,11 +35,12 @@
             <div class="mb-3">
                 <label for="order_service" class="form-label">Status</label>
                 <select class="form-select" id="order_service" name="status">
-                    <option value="{{$order->status}}">{{$order->status}}</option>
-                    <option value="Waiting Pickup">Waiting Pickup</option>
-                    <option value="On Progress">On Progress</option>
-                    <option value="Finished">Finished</option>
-                    <option value="Delivered">Delivered</option>
+                    <option value="{{ $order->status }}" selected>{{ $order->status }}</option>
+                    @foreach (['Waiting Pickup', 'On Progress', 'Finished'] as $status)
+                        @if ($order->status !== $status)
+                            <option value="{{ $status }}">{{ $status }}</option>
+                        @endif
+                    @endforeach
                 </select>
             </div>
 
