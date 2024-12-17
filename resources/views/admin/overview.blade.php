@@ -39,21 +39,21 @@
         <div class="d-flex flex-column justify-content-center align-items-center gap-2">
             <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2 gap-md-5">
                 <div class="d-flex flex-column justify-content-center align-items-center">
-                    <div class="card rounded-2 p-4 border border-3 border-info text-center" style="max-width: 14.5rem; min-width: 14.5rem;">
+                    <div class="card rounded-2 p-4 border border-3 border-info text-center" style="max-width: 15.5rem; min-width: 15.5rem;">
                         <h5>Regular Laundry</h5>
                         <hr class="my-2">
                         <p class="fw-bold fs-3">Rp{{ number_format($regular, 0, ',', '.') }},00</p>
                     </div>
                 </div>
                 <div class="d-flex flex-column justify-content-center align-items-center">
-                    <div class="card rounded-2 p-4 border border-3 border-info text-center" style="max-width: 14.5rem; min-width: 14.5rem;">
+                    <div class="card rounded-2 p-4 border border-3 border-info text-center" style="max-width: 15.5rem; min-width: 15.5rem;">
                         <h5>Next Day Laundry</h5>
                         <hr class="my-2">
                         <p class="fw-bold fs-3">Rp{{ number_format($nextDay, 0, ',', '.') }},00</p>
                     </div>
                 </div>
                 <div class="d-flex flex-column justify-content-center align-items-center">
-                    <div class="card rounded-2 p-4 border border-3 border-info text-center" style="max-width: 14.5rem; min-width: 14.5rem;">
+                    <div class="card rounded-2 p-4 border border-3 border-info text-center" style="max-width: 15.5rem; min-width: 15.5rem;">
                         <h5>Same Day Laundry</h5>
                         <hr class="my-2">
                         <p class="fw-bold fs-3">Rp{{ number_format($sameDay, 0, ',', '.') }},00</p>
@@ -62,14 +62,14 @@
             </div>
             <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2 gap-md-5">
                 <div class="d-flex flex-column justify-content-center align-items-center">
-                    <div class="card rounded-2 p-4 border border-3 border-info text-center" style="max-width: 14.5rem; min-width: 14.5rem;">
+                    <div class="card rounded-2 p-4 border border-3 border-info text-center" style="max-width: 15.5rem; min-width: 15.5rem;">
                         <h5>Dry Cleaning</h5>
                         <hr class="my-2">
                         <p class="fw-bold fs-3">Rp{{ number_format($dry, 0, ',', '.') }},00</p>
                     </div>
                 </div>
                 <div class="d-flex flex-column justify-content-center align-items-center">
-                    <div class="card rounded-2 p-4 border border-3 border-info text-center" style="max-width: 14.5rem; min-width: 14.5rem;">
+                    <div class="card rounded-2 p-4 border border-3 border-info text-center" style="max-width: 15.5rem; min-width: 15.5rem;">
                         <h5>Iron Cleaning</h5>
                         <hr class="my-2">
                         <p class="fw-bold fs-3">Rp{{ number_format($iron, 0, ',', '.') }},00</p>
