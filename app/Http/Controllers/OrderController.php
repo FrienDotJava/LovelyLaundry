@@ -117,6 +117,11 @@ class OrderController extends Controller
 
     public function destroy($id){
         $order = Order::find($id);
+        $transactions = Transaction::where('id_order', $id)->get();
+
+        foreach($transactions as $transaction){
+            $transaction->delete();
+        }
         $order->delete();
         return redirect()->route('manageorder')->with(['success' => 'Data has been successfully deleted!']);
     }
