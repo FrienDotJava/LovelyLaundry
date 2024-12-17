@@ -63,11 +63,12 @@
         }
 
         .btn-secondary {
-            background-color:rgb(94, 94, 94); 
-            color:rgb(255, 255, 255);
+            background-color:rgb(189, 189, 189); 
+            color:rgb(0, 0, 0);
+            border: none;
         }
         .btn-secondary:hover {
-            background-color:rgb(142, 142, 142); 
+            background-color:rgb(87, 87, 87); 
             color: white;
         }
         

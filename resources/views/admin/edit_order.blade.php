@@ -45,7 +45,7 @@
 
             <div class="modal-footer d-flex gap-4 mb-3">
                 <a href="{{ route('order.index') }}" class="btn btn-secondary">Cancel</a>
-                <button type="submit" class="btn btn-info">Save changes</button>
+                <button type="submit" class="btn btn-submit">Save changes</button>
             </div>
         </form>
     </div>

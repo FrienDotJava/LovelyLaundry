@@ -111,6 +111,30 @@
             color: white;
             border-color: #007bff;
         }
+
+        .btn-submit {
+            background-color:rgb(98, 192, 255) !important; 
+            color:rgb(0, 0, 0) !important;
+        }
+        .btn-submit:hover {
+            background-color: #1e3463 !important; 
+            color: white !important;
+        }
+
+        .btn-secondary {
+            background-color:rgb(189, 189, 189) !important; 
+            color:rgb(0, 0, 0) !important;
+            border: none !important;
+        }
+        .btn-secondary:hover {
+            background-color:rgb(87, 87, 87) !important; 
+            color: white !important;
+        }
+
+        .user-panel{
+            border-color: #ffffff !important;
+        }
+
     </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">

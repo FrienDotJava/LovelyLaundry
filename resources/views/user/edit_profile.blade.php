@@ -3,10 +3,10 @@
 @section('content')
 
 <section class="vh-100 d-flex align-items-center justify-content-center" style="background-color: #f4f5f7;">
-    <div class="container">
-        <div class="row d-flex justify-content-center align-items-center "> 
+    <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100"> 
             <div class="col-md-8">
-                <div class="card mb-3 bg-info-subtle card shadow-lg py-3 px-5" style="border-radius: 1rem; width: 1000px;">
+                <div class="card mb-3 bg-info-subtle card shadow-lg py-3 px-5" style="border-radius: 1rem; width: 800px;  margin: auto">
                         <div class="d-flex justify-content-between align-items-center mt-3">
                             <h1 class="fw-bold">Edit Data</h1>
                         </div>
