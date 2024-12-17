@@ -39,7 +39,7 @@ use Carbon\Carbon;
         </div>
         <hr class="mt-0">
         @empty
-        <h3>Data Kosong</h3>
+        <h3>No Orders</h3>
         @endforelse
     </div>
 </div>

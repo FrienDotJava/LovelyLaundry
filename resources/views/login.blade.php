@@ -69,7 +69,7 @@
                       </div>
                     </div>
                     <div class="text-center my-4">
-                      <a href="{{ url('register') }}" style="text-decoration: none;">Belum punya akun?</a>
+                      <a href="{{ url('register') }}" style="text-decoration: none;">Don't have an account yet?</a>
                     </div>
                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                       <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-lg rounded-pill button" style="">Log In</button>

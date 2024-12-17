@@ -33,7 +33,7 @@ class LoginController extends Controller
                 return redirect('/');
             }
         }else{
-            Session::flash('error', 'Email atau Password Salah');
+            Session::flash('error', 'Wrong Email or Password');
             
             return redirect('/login');
         }

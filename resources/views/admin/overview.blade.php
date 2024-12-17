@@ -11,7 +11,7 @@
         <hr class="mx-5">
         <div class="row gy-4 gy-md-0">
             <div class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center">
-                <h3>Jumlah User</h3>
+                <h3>Total Users</h3>
                 <div class="card rounded-circle p-4 fs-3 border border-3 border-info text-center" style="width:6rem; height:6rem;">
                     {{$userCount}}
                 </div>

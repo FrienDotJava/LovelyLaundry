@@ -108,7 +108,7 @@
                     </div>
   
                     <div class="text-center my-4">
-                      <a href="{{ url('login') }}" style="text-decoration: none;">Sudah punya akun?</a>
+                      <a href="{{ url('login') }}" style="text-decoration: none;">Already have an account?</a>
                     </div>
   
                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
