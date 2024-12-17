@@ -61,7 +61,7 @@ Route::get('/admin/order', [OrderController::class, 'index'])->name('manageorder
 Route::delete('/admin/order/{id}', [OrderController::class, 'destroy'])->name('deleteorder')->middleware([ 'admin']);
 Route::get('/admin/order/search', [OrderController::class, 'search'])->name('searchorder')->middleware(['admin']);
 
-Route::resource('/order', OrderController::class)->middleware('auth');
+Route::resource('user/order', OrderController::class)->middleware('auth');
 Route::get('/transaction/{id}', [TransactionController::class, 'createTransaction'])->name('createTransaction')->middleware('auth');
 Route::post('/transaction/store/{id}', [TransactionController::class, 'storeTransaction'])->name('storeTransaction')->middleware('auth');
 Route::resource('/transaction', TransactionController::class)->middleware('auth');
